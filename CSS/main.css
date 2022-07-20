@@ -1,0 +1,184 @@
+@import url("http://fonts.cdnfonts.com/css/space-mission");
+@import url("http://fonts.cdnfonts.com/css/aldrich");
+#particles-js {
+  position: absolute;
+  height: 100vh;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 50% 50%;
+}
+
+.logo {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  z-index: 3;
+  width: 5rem;
+  height: 5rem;
+}
+
+.headline {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-45%, -50%);
+  z-index: 3;
+  color: #ffe600;
+  line-height: 5rem;
+}
+.headline h1 {
+  font-family: "SPACE MISSION", sans-serif;
+  font-size: 8rem;
+  letter-spacing: 0.5rem;
+  -webkit-animation: animation1 1s ease-in-out infinite;
+          animation: animation1 1s ease-in-out infinite;
+}
+.headline p {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-family: Aldrich, sans-serif;
+  margin-left: -2rem;
+  letter-spacing: 0.3rem;
+}
+
+@-webkit-keyframes animation1 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation1 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.links {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+}
+.links a {
+  font-size: 2.1rem;
+  color: #777777;
+  margin: 0.2rem;
+  transition: 0.5s ease-in-out;
+}
+.links a:nth-child(2) {
+  font-size: 2.3rem;
+}
+.links a:nth-child(3) {
+  font-size: 2.3rem;
+}
+.links a:hover {
+  color: #ffffff;
+}
+
+.btn-start {
+  position: absolute;
+  right: 50%;
+  bottom: 25%;
+  transform: translate(50%, -50%);
+  color: #ffe600;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 0.1rem solid #ffe600;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+  background: #000000;
+  font-family: Aldrich, sans-serif;
+  z-index: 3;
+  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.3));
+}
+.btn-start:hover {
+  filter: drop-shadow(0px 10px 5px rgba(255, 230, 0, 0.3));
+}
+
+.portal-headline {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.portal-headline h1 {
+  font-size: 6rem;
+}
+
+.btn-portal {
+  position: absolute;
+}
+.btn-portal .btn {
+  color: #ffe600;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 0.1rem solid #ffe600;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+  background: #000000;
+  font-family: Aldrich, sans-serif;
+  z-index: 3;
+  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.3));
+}
+.btn-portal .btn:hover {
+  filter: drop-shadow(0px 10px 5px rgba(255, 230, 0, 0.3));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  background: #000000;
+}
+.container::before {
+  content: "";
+  background: url("../Assets/bg-u.png") no-repeat;
+  height: 55%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.container::after {
+  content: "";
+  background: url("../Assets/bg-d.png");
+  height: 55%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.container .rectangle {
+  position: absolute;
+  inset: 0 0 0 0;
+  background: url("../Assets/Rectangle.png") no-repeat;
+}

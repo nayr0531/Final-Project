@@ -1,0 +1,35 @@
+@import "./particles", "./config", "./landing-page", "./portal";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  background: $clr-2;
+  &::before {
+    content: "";
+    background: url("../Assets/bg-u.png") no-repeat;
+    height: 55%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  &::after {
+    content: "";
+    background: url("../Assets/bg-d.png");
+    height: 55%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .rectangle {
+    position: absolute;
+    inset: 0 0 0 0;
+    background: url("../Assets/Rectangle.png") no-repeat;
+  }
+}

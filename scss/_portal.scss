@@ -1,0 +1,13 @@
+.portal-headline {
+  width: max-content;
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+.btn-portal {
+  position: absolute;
+  .btn {
+    @include btn-style;
+  }
+}
