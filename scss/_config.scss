@@ -14,9 +14,10 @@ $clr-3: #777777;
 @mixin btn-style {
   color: $clr-1;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   border: 0.1rem solid $clr-1;
   padding: 1rem 3rem;
+  text-align: center;
   border-radius: 5rem;
   background: $clr-2;
   font-family: $font-2;
@@ -26,4 +27,25 @@ $clr-3: #777777;
   &:hover {
     filter: drop-shadow(0px 10px 5px rgba($clr-1, 0.3));
   }
+}
+
+@mixin portal-title {
+  color: $clr-1;
+  text-align: center;
+  margin: 2rem;
+  font-size: 4rem;
+  font-family: $font-1;
+  letter-spacing: 0.8rem;
+  text-decoration: overline;
+  position: relative;
+  z-index: 3;
+}
+
+@mixin  glass-effect {
+  background: rgba(255, 229, 0, 0.21);
+      border-radius: 1rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(9.5px);
+      -webkit-backdrop-filter: blur(9.5px);
+      border: 1px solid rgba(255, 229, 0, 1);
 }

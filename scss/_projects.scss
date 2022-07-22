@@ -1,0 +1,45 @@
+.projects {
+  overflow: hidden;
+  padding-bottom: 20rem;
+
+  .btn {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    @include btn-style;
+    margin: 2rem;
+    font-size: 1rem;
+  }
+  .title {
+    @include portal-title;
+  }
+  background: $clr-2;
+  position: relative;
+  .project-list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100%;
+    .project-card {
+      z-index: 3;
+      width: 40%;
+      height: 18rem;
+      margin: 1rem;
+      @include glass-effect;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        position: relative;
+      }
+      &:hover {
+        position: relative;
+        top: -0.3rem;
+      }
+    }
+  }
+}
