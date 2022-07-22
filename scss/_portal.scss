@@ -1,17 +1,30 @@
 .portal-headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: max-content;
+  margin-top: 5rem;
   h1 {
     font-size: 6rem;
+    margin-bottom: 3rem;
   }
 }
 
 .btn-portal {
-  position: absolute;
-  margin-top: 4rem;
   margin-left: -2rem;
-  width: max-content;
   .btn {
     @include btn-style;
     margin: 2rem;
   }
+}
+.return-home {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  @include btn-style;
+  margin: 2rem;
+  font-size: 1rem;
 }

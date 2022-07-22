@@ -1,0 +1,88 @@
+.contact {
+  height: 100vh;
+  overflow: hidden;
+  background: $clr-2;
+  .title {
+    @include portal-title;
+  }
+  .message {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    @include glass-effect;
+    width: 80vw;
+    height: 60vh;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    form {
+      margin: 3rem 4rem;
+      .field {
+        label {
+          font-family: $font-2;
+          color: $clr-1;
+          margin-bottom: 0.2rem;
+          text-transform: uppercase;
+          display: block;
+        }
+        input,
+        textarea {
+          font-size: 1rem;
+          border: 0.1rem solid $clr-1;
+          outline: none;
+          font-family: $font-2;
+          display: block;
+          margin-bottom: 1rem;
+          border-radius: 0.2rem;
+          width: 100%;
+          padding: 1rem;
+        }
+      }
+      .submit {
+        border: 0.1rem solid $clr-1;
+        font-size: 1.5rem;
+        padding: 0.5rem 2rem;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        font-family: $font-2;
+        text-transform: uppercase;
+        color: $clr-1;
+        background: rgba($clr-1, 0.3);
+        &:hover {
+          background: rgba($clr-1, 0.5);
+        }
+      }
+    }
+
+    .links {
+      flex-direction: column;
+      align-items: start;
+      border-left: 0.1rem solid $clr-1;
+      .link {
+        border: 0.1rem solid $clr-1;
+        padding: 1rem 2rem;
+        margin: 1rem;
+        border-radius: 0.5rem;
+        width: 30rem;
+        p {
+          font-family: $font-2;
+          font-weight: bolder;
+          color: rgba($clr-2, 0.7);
+          margin-bottom: 0.3rem;
+        }
+        h1 {
+          font-family: $font-2;
+          font-size: 1.7rem;
+          color: rgba($clr-1, 0.5);
+        }
+        &:hover {
+          background: rgba($clr-1, 0.1);
+        }
+      }
+      .social-media {
+        @include links;
+      }
+    }
+  }
+}

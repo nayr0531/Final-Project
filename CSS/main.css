@@ -123,21 +123,22 @@
 }
 
 .portal-headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  margin-top: 5rem;
 }
 .portal-headline h1 {
   font-size: 6rem;
+  margin-bottom: 3rem;
 }
 
 .btn-portal {
-  position: absolute;
-  margin-top: 4rem;
   margin-left: -2rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .btn-portal .btn {
   color: #ffe600;
@@ -154,6 +155,30 @@
   margin: 2rem;
 }
 .btn-portal .btn:hover {
+  filter: drop-shadow(0px 10px 5px rgba(255, 230, 0, 0.3));
+}
+
+.return-home {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: #ffe600;
+  text-decoration: none;
+  font-size: 1.7rem;
+  border: 0.1rem solid #ffe600;
+  padding: 1rem 3rem;
+  text-align: center;
+  border-radius: 5rem;
+  background: #000000;
+  font-family: Aldrich, sans-serif;
+  z-index: 3;
+  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.3));
+  margin: 2rem;
+  font-size: 1rem;
+}
+.return-home:hover {
   filter: drop-shadow(0px 10px 5px rgba(255, 230, 0, 0.3));
 }
 
@@ -246,7 +271,7 @@
 }
 .about .details {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -30%);
   background: rgba(255, 229, 0, 0.21);
@@ -255,14 +280,175 @@
   backdrop-filter: blur(9.5px);
   -webkit-backdrop-filter: blur(9.5px);
   border: 1px solid rgb(255, 229, 0);
-  width: 90vw;
-  height: 70vh;
+  width: 80vw;
+  height: 60vh;
   z-index: 3;
+  display: grid;
+  grid-template-columns: 15rem auto;
+  grid-template-rows: 15rem auto;
 }
 .about .details img {
-  width: 10rem;
-  height: 10rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
+  border: 0.1rem solid #ffe600;
+  margin: 2rem;
+  grid-column: 1/2;
+}
+.about .details .details-intro {
+  grid-column: 2/-1;
+  margin-left: 4rem;
+  margin-bottom: -2rem;
+  align-self: end;
+}
+.about .details .details-intro h1 {
+  font-size: 4rem;
+  font-family: Aldrich, sans-serif;
+  color: #ffe600;
+  letter-spacing: 0.3rem;
+}
+.about .details .details-intro p {
+  font-size: 1.7rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Aldrich, sans-serif;
+  font-weight: bolder;
+}
+.about .details .details-intro p span {
+  color: #ffe600;
+  text-transform: uppercase;
+}
+.about .details .details-basic {
+  margin: 4rem;
+  grid-column: 2/-1;
+}
+.about .details .details-basic p {
+  font-size: 1.5rem;
+  font-family: Aldrich, sans-serif;
+  line-height: 2.2rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+}
+.about .details .details-basic p span {
+  color: #ffe600;
+  text-transform: uppercase;
+}
+
+.contact {
+  height: 100vh;
+  overflow: hidden;
+  background: #000000;
+}
+.contact .title {
+  color: #ffe600;
+  text-align: center;
+  margin: 2rem;
+  font-size: 4rem;
+  font-family: "SPACE MISSION", sans-serif;
+  letter-spacing: 0.8rem;
+  text-decoration: overline;
+  position: relative;
+  z-index: 3;
+}
+.contact .message {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  background: rgba(255, 229, 0, 0.21);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: 1px solid rgb(255, 229, 0);
+  width: 80vw;
+  height: 60vh;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+}
+.contact .message form {
+  margin: 3rem 4rem;
+}
+.contact .message form .field label {
+  font-family: Aldrich, sans-serif;
+  color: #ffe600;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  display: block;
+}
+.contact .message form .field input,
+.contact .message form .field textarea {
+  font-size: 1rem;
+  border: 0.1rem solid #ffe600;
+  outline: none;
+  font-family: Aldrich, sans-serif;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 0.2rem;
+  width: 100%;
+  padding: 1rem;
+}
+.contact .message form .submit {
+  border: 0.1rem solid #ffe600;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-family: Aldrich, sans-serif;
+  text-transform: uppercase;
+  color: #ffe600;
+  background: rgba(255, 230, 0, 0.3);
+}
+.contact .message form .submit:hover {
+  background: rgba(255, 230, 0, 0.5);
+}
+.contact .message .links {
+  flex-direction: column;
+  align-items: start;
+  border-left: 0.1rem solid #ffe600;
+}
+.contact .message .links .link {
+  border: 0.1rem solid #ffe600;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  width: 30rem;
+}
+.contact .message .links .link p {
+  font-family: Aldrich, sans-serif;
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 0.3rem;
+}
+.contact .message .links .link h1 {
+  font-family: Aldrich, sans-serif;
+  font-size: 1.7rem;
+  color: rgba(255, 230, 0, 0.5);
+}
+.contact .message .links .link:hover {
+  background: rgba(255, 230, 0, 0.1);
+}
+.contact .message .links .social-media {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+}
+.contact .message .links .social-media a {
+  font-size: 2.1rem;
+  color: #777777;
+  margin: 0.2rem;
+  transition: 0.5s ease-in-out;
+}
+.contact .message .links .social-media a:nth-child(2) {
+  font-size: 2.3rem;
+}
+.contact .message .links .social-media a:nth-child(3) {
+  font-size: 2.3rem;
+}
+.contact .message .links .social-media a:hover {
+  color: #ffffff;
 }
 
 * {
