@@ -15,6 +15,7 @@
     .project-card {
       z-index: 3;
       width: 40%;
+      height: 18rem;
       margin: 1rem;
       @include glass-effect;
       a {

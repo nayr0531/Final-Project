@@ -209,6 +209,7 @@
 .projects .project-list .project-card {
   z-index: 3;
   width: 40%;
+  height: 18rem;
   margin: 1rem;
   background: rgba(255, 229, 0, 0.21);
   border-radius: 1rem;
