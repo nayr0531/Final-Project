@@ -184,32 +184,9 @@
 
 .projects {
   overflow: hidden;
-  padding-bottom: 20rem;
+  height: 150vh;
   background: #000000;
   position: relative;
-}
-.projects .btn {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  color: #ffe600;
-  text-decoration: none;
-  font-size: 1.7rem;
-  border: 0.1rem solid #ffe600;
-  padding: 1rem 3rem;
-  text-align: center;
-  border-radius: 5rem;
-  background: #000000;
-  font-family: Aldrich, sans-serif;
-  z-index: 3;
-  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.3));
-  margin: 2rem;
-  font-size: 1rem;
-}
-.projects .btn:hover {
-  filter: drop-shadow(0px 10px 5px rgba(255, 230, 0, 0.3));
 }
 .projects .title {
   color: #ffe600;
@@ -228,12 +205,10 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100vw;
-  height: 100%;
 }
 .projects .project-list .project-card {
   z-index: 3;
   width: 40%;
-  height: 18rem;
   margin: 1rem;
   background: rgba(255, 229, 0, 0.21);
   border-radius: 1rem;
@@ -241,6 +216,24 @@
   backdrop-filter: blur(9.5px);
   -webkit-backdrop-filter: blur(9.5px);
   border: 1px solid rgb(255, 229, 0);
+}
+.projects .project-list .project-card a {
+  position: relative;
+}
+.projects .project-list .project-card a p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffe600;
+  text-align: center;
+  font-family: Aldrich, sans-serif;
+  font-size: 1.5rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  color: #000000;
 }
 .projects .project-list .project-card img {
   width: 100%;
